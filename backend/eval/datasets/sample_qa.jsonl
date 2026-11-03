@@ -1,0 +1,53 @@
+{"id": "q01", "type": "lookup", "question": "What is the opcode of the Identify command?", "gold": ["nvme-admin-commands:5.2", "nvme-admin-commands:5.1"], "keywords": ["06h"]}
+{"id": "q02", "type": "lookup", "question": "What data structure does CNS 01h return?", "gold": ["nvme-admin-commands:5.2.1"], "keywords": ["Identify Controller"]}
+{"id": "q03", "type": "lookup", "question": "Which CNS value returns the active namespace ID list?", "gold": ["nvme-admin-commands:5.2.1"], "keywords": ["02h"]}
+{"id": "q04", "type": "lookup", "question": "What is log page identifier 0x81?", "gold": ["nvme-admin-commands:5.3.1", "nvme-admin-commands:5.6.2"], "keywords": ["Sanitize Status"]}
+{"id": "q05", "type": "lookup", "question": "Which LID is the SMART / Health Information log?", "gold": ["nvme-admin-commands:5.3.1", "nvme-log-pages:8.2"], "keywords": ["02h"]}
+{"id": "q06", "type": "lookup", "question": "What does FID 07h configure?", "gold": ["nvme-admin-commands:5.4.1", "nvme-admin-commands:5.4.2"], "keywords": ["Number of Queues"]}
+{"id": "q07", "type": "lookup", "question": "Which feature identifier is the Namespace Write Protection Config?", "gold": ["nvme-admin-commands:5.4.1", "nvme-controller-and-security:9.1"], "keywords": ["84h"]}
+{"id": "q08", "type": "lookup", "question": "What is the SES field in Format NVM and what values can it take?", "gold": ["nvme-admin-commands:5.5"], "keywords": ["User Data Erase", "Cryptographic Erase"]}
+{"id": "q09", "type": "lookup", "question": "What are the SANACT values for the Sanitize command?", "gold": ["nvme-admin-commands:5.6.1"], "keywords": ["Block Erase", "Crypto Erase", "Overwrite"]}
+{"id": "q10", "type": "lookup", "question": "What does Firmware Commit action 011b do?", "gold": ["nvme-admin-commands:5.7"], "keywords": ["immediately"]}
+{"id": "q11", "type": "lookup", "question": "Which status code is 1Dh in the generic command status values?", "gold": ["nvme-queues-and-status:3.6"], "keywords": ["Sanitize In Progress"]}
+{"id": "q12", "type": "lookup", "question": "What is generic status code 0Ch?", "gold": ["nvme-queues-and-status:3.6"], "keywords": ["Command Sequence Error"]}
+{"id": "q13", "type": "lookup", "question": "What does SCT 2h mean?", "gold": ["nvme-queues-and-status:3.5", "nvme-queues-and-status:3.7"], "keywords": ["Media and Data Integrity"]}
+{"id": "q14", "type": "lookup", "question": "What is the size of an Error Information log entry and what are its first fields?", "gold": ["nvme-log-pages:8.1"], "keywords": ["64", "Error Count"]}
+{"id": "q15", "type": "lookup", "question": "Which bytes hold the Composite Temperature in the SMART log and in what unit?", "gold": ["nvme-log-pages:8.2"], "keywords": ["Kelvin"]}
+{"id": "q16", "type": "lookup", "question": "Where is the Do Not Retry bit in the status field?", "gold": ["nvme-queues-and-status:3.4"], "keywords": ["14"]}
+{"id": "q17", "type": "lookup", "question": "What is the opcode for Dataset Management and which bit requests deallocate?", "gold": ["nvme-queues-and-status:4.4", "nvme-queues-and-status:4.1"], "keywords": ["09h", "AD"]}
+{"id": "q18", "type": "lookup", "question": "Which Identify Controller field reports the Error Log Page Entries?", "gold": ["nvme-admin-commands:5.2.2"], "keywords": ["ELPE", "262"]}
+{"id": "q19", "type": "lookup", "question": "What does the NWPC field indicate?", "gold": ["nvme-controller-and-security:9", "nvme-admin-commands:5.2.2"], "keywords": ["Write Protect"]}
+{"id": "q20", "type": "lookup", "question": "What is the SECP value for security protocol discovery?", "gold": ["nvme-controller-and-security:10.2"], "keywords": ["00h"]}
+{"id": "q21", "type": "lookup", "question": "Where are NUMDL and NUMDU located in Get Log Page?", "gold": ["nvme-admin-commands:5.3"], "keywords": ["Dword 10", "Dword 11"]}
+{"id": "q22", "type": "lookup", "question": "What does the SEL field of Get Features select?", "gold": ["nvme-admin-commands:5.4"], "keywords": ["current", "default", "saved"]}
+{"id": "q23", "type": "lookup", "question": "What does LBADS mean in an LBA format descriptor?", "gold": ["nvme-admin-commands:5.2.3"], "keywords": ["power of two"]}
+{"id": "q24", "type": "lookup", "question": "What value is written to NSSR to start an NVM Subsystem Reset?", "gold": ["nvme-controller-and-security:7.2"], "keywords": ["4E564D65h"]}
+{"id": "q25", "type": "lookup", "question": "What does CC.SHN 10b request?", "gold": ["nvme-controller-and-security:7.3"], "keywords": ["abrupt"]}
+{"id": "q26", "type": "paraphrase", "question": "How can I wipe every bit of user data from the whole drive, including caches, so nothing can be recovered?", "gold": ["nvme-admin-commands:5.6", "nvme-admin-commands:5.6.1"], "keywords": ["Sanitize"]}
+{"id": "q27", "type": "paraphrase", "question": "How does the host know a new completion entry has been posted without polling a register?", "gold": ["nvme-queues-and-status:3.3"], "keywords": ["Phase Tag"]}
+{"id": "q28", "type": "paraphrase", "question": "How do I make a namespace read only so no one can modify it?", "gold": ["nvme-controller-and-security:9.1", "nvme-controller-and-security:9"], "keywords": ["Write Protect"]}
+{"id": "q29", "type": "paraphrase", "question": "What happens to my writes after I lock a namespace against modification?", "gold": ["nvme-controller-and-security:9.2"], "keywords": ["Namespace is Write Protected"]}
+{"id": "q30", "type": "paraphrase", "question": "How can I tell how worn out the drive is?", "gold": ["nvme-log-pages:8.2"], "keywords": ["Percentage Used"]}
+{"id": "q31", "type": "paraphrase", "question": "How many times did the drive lose power without being told to shut down first?", "gold": ["nvme-log-pages:8.2", "nvme-controller-and-security:7.3"], "keywords": ["Unsafe Shutdowns"]}
+{"id": "q32", "type": "paraphrase", "question": "Why did my request for more I/O queues fail after I had already set some up?", "gold": ["nvme-admin-commands:5.4.2"], "keywords": ["Command Sequence Error"]}
+{"id": "q33", "type": "paraphrase", "question": "In what order must queues be set up when bringing the device up?", "gold": ["nvme-queues-and-status:3.1", "nvme-controller-and-security:7.1"], "keywords": ["Completion Queue"]}
+{"id": "q34", "type": "paraphrase", "question": "How do I install new firmware and make it take effect without rebooting?", "gold": ["nvme-admin-commands:5.7"], "keywords": ["011b"]}
+{"id": "q35", "type": "paraphrase", "question": "How can the host cancel a command it already submitted?", "gold": ["nvme-admin-commands:5.9"], "keywords": ["Abort"]}
+{"id": "q36", "type": "paraphrase", "question": "How does the device notify the host about health problems or errors without the host asking?", "gold": ["nvme-admin-commands:5.10", "nvme-log-pages:8.2.1"], "keywords": ["Asynchronous Event"]}
+{"id": "q37", "type": "paraphrase", "question": "Which fields tell me exactly which part of my command was wrong?", "gold": ["nvme-log-pages:8.1"], "keywords": ["Parameter Error Location"]}
+{"id": "q38", "type": "paraphrase", "question": "Can I keep using the drive for reads and writes while it is being erased in the background?", "gold": ["nvme-admin-commands:5.6.2"], "keywords": ["Sanitize In Progress"]}
+{"id": "q39", "type": "paraphrase", "question": "How do I tell the drive that some blocks are no longer used (trim)?", "gold": ["nvme-queues-and-status:4.4"], "keywords": ["deallocate"]}
+{"id": "q40", "type": "paraphrase", "question": "How do I make sure written data is really on flash before the write completes?", "gold": ["nvme-queues-and-status:4.2", "nvme-queues-and-status:4.3"], "keywords": ["FUA"]}
+{"id": "q41", "type": "paraphrase", "question": "What should I check when reading or writing an encrypted locked region of the disk?", "gold": ["nvme-controller-and-security:10.3"], "keywords": ["Access Denied"]}
+{"id": "q42", "type": "paraphrase", "question": "Which firmware image is running right now and which one becomes active after reboot?", "gold": ["nvme-log-pages:8.3"], "keywords": ["AFI"]}
+{"id": "q43", "type": "paraphrase", "question": "How do I carve out a new storage volume and make it visible to a controller?", "gold": ["nvme-admin-commands:5.8"], "keywords": ["Namespace Management", "Namespace Attachment"]}
+{"id": "q44", "type": "paraphrase", "question": "What does the drive do if I reuse a command tag that is still outstanding on the same queue?", "gold": ["nvme-queues-and-status:3.6"], "keywords": ["Command ID Conflict"]}
+{"id": "q45", "type": "paraphrase", "question": "How long should the host wait for the controller to become ready after enabling it?", "gold": ["nvme-controller-and-security:7.1"], "keywords": ["CAP.TO"]}
+{"id": "u01", "type": "unanswerable", "question": "What is the maximum lane count and link speed for PCIe Gen 6 x16 retimers?", "gold": [], "keywords": []}
+{"id": "u02", "type": "unanswerable", "question": "How do I configure zoned namespaces zone append size limits?", "gold": [], "keywords": []}
+{"id": "u03", "type": "unanswerable", "question": "What is the recommended thermal paste for an M.2 heatsink?", "gold": [], "keywords": []}
+{"id": "u04", "type": "unanswerable", "question": "Explain the Key Per I/O feature and its key tag format.", "gold": [], "keywords": []}
+{"id": "u05", "type": "unanswerable", "question": "Which UFS descriptor reports the bMaxNumOfRTT value?", "gold": [], "keywords": []}
+{"id": "u06", "type": "unanswerable", "question": "How does the Persistent Event Log record thermal excursion events?", "gold": [], "keywords": []}
+{"id": "u07", "type": "unanswerable", "question": "What is the TCP port used by NVMe over TCP discovery controllers?", "gold": [], "keywords": []}
+{"id": "u08", "type": "unanswerable", "question": "How do I set up a RAID 5 array on a hardware controller?", "gold": [], "keywords": []}

@@ -1,0 +1,195 @@
+{
+  "name": "sample-corpus-offline",
+  "timestamp": "2026-11-02T18:23:26+00:00",
+  "dataset": "eval/datasets/sample_qa.jsonl",
+  "n_questions": 53,
+  "n_chunks": 63,
+  "embedder": "lsa:192",
+  "retrieval": {
+    "bm25": {
+      "all": {
+        "hit@1": 0.6667,
+        "hit@5": 0.8889,
+        "recall@5": 0.8444,
+        "mrr@10": 0.7586,
+        "ndcg@10": 0.7811,
+        "n": 45
+      },
+      "lookup": {
+        "hit@1": 0.92,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "mrr@10": 0.948,
+        "ndcg@10": 0.9515,
+        "n": 25
+      },
+      "paraphrase": {
+        "hit@1": 0.35,
+        "hit@5": 0.75,
+        "recall@5": 0.65,
+        "mrr@10": 0.5218,
+        "ndcg@10": 0.568,
+        "n": 20
+      },
+      "latency_ms": {
+        "p50": 0.16,
+        "p95": 0.21
+      }
+    },
+    "bm25+expansion": {
+      "all": {
+        "hit@1": 0.6667,
+        "hit@5": 0.8889,
+        "recall@5": 0.8444,
+        "mrr@10": 0.7586,
+        "ndcg@10": 0.7811,
+        "n": 45
+      },
+      "lookup": {
+        "hit@1": 0.92,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "mrr@10": 0.948,
+        "ndcg@10": 0.9515,
+        "n": 25
+      },
+      "paraphrase": {
+        "hit@1": 0.35,
+        "hit@5": 0.75,
+        "recall@5": 0.65,
+        "mrr@10": 0.5218,
+        "ndcg@10": 0.568,
+        "n": 20
+      },
+      "latency_ms": {
+        "p50": 0.18,
+        "p95": 0.24
+      }
+    },
+    "dense": {
+      "all": {
+        "hit@1": 0.6,
+        "hit@5": 0.8889,
+        "recall@5": 0.8333,
+        "mrr@10": 0.7271,
+        "ndcg@10": 0.7642,
+        "n": 45
+      },
+      "lookup": {
+        "hit@1": 0.8,
+        "hit@5": 1.0,
+        "recall@5": 0.98,
+        "mrr@10": 0.8867,
+        "ndcg@10": 0.8971,
+        "n": 25
+      },
+      "paraphrase": {
+        "hit@1": 0.35,
+        "hit@5": 0.75,
+        "recall@5": 0.65,
+        "mrr@10": 0.5277,
+        "ndcg@10": 0.598,
+        "n": 20
+      },
+      "latency_ms": {
+        "p50": 1.0,
+        "p95": 1.16
+      }
+    },
+    "hybrid (RRF)": {
+      "all": {
+        "hit@1": 0.6444,
+        "hit@5": 0.8889,
+        "recall@5": 0.8444,
+        "mrr@10": 0.7539,
+        "ndcg@10": 0.7753,
+        "n": 45
+      },
+      "lookup": {
+        "hit@1": 0.88,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "mrr@10": 0.9333,
+        "ndcg@10": 0.9381,
+        "n": 25
+      },
+      "paraphrase": {
+        "hit@1": 0.35,
+        "hit@5": 0.75,
+        "recall@5": 0.65,
+        "mrr@10": 0.5296,
+        "ndcg@10": 0.5719,
+        "n": 20
+      },
+      "latency_ms": {
+        "p50": 1.04,
+        "p95": 1.22
+      }
+    },
+    "hybrid + fixed-size chunks": {
+      "all": {
+        "hit@1": 0.2222,
+        "hit@5": 0.6889,
+        "recall@5": 0.5667,
+        "mrr@10": 0.4146,
+        "ndcg@10": 0.4292,
+        "n": 45
+      },
+      "lookup": {
+        "hit@1": 0.16,
+        "hit@5": 0.8,
+        "recall@5": 0.68,
+        "mrr@10": 0.443,
+        "ndcg@10": 0.4875,
+        "n": 25
+      },
+      "paraphrase": {
+        "hit@1": 0.3,
+        "hit@5": 0.55,
+        "recall@5": 0.425,
+        "mrr@10": 0.3792,
+        "ndcg@10": 0.3564,
+        "n": 20
+      },
+      "latency_ms": {
+        "p50": 0.89,
+        "p95": 0.99
+      }
+    }
+  },
+  "abstention": {
+    "n_unanswerable": 8,
+    "lexical_configured": {
+      "threshold": 0.08,
+      "unanswerable_refused": 0.25,
+      "answerable_wrongly_refused": 0.0,
+      "balanced_accuracy": 0.625
+    },
+    "lexical_best": {
+      "threshold": 0.27,
+      "unanswerable_refused": 1.0,
+      "answerable_wrongly_refused": 0.4222,
+      "balanced_accuracy": 0.7889
+    },
+    "dense_best": {
+      "threshold": 0.74,
+      "unanswerable_refused": 1.0,
+      "answerable_wrongly_refused": 0.4667,
+      "balanced_accuracy": 0.7667
+    }
+  },
+  "answers": {
+    "model": "extractive",
+    "n": 53,
+    "keyword_recall": 0.7222,
+    "citation_precision": 0.5556,
+    "answers_with_correct_citation": 0.8444,
+    "citation_coverage": 0.6519,
+    "false_abstention_rate": 0.0,
+    "correct_abstention_rate": 0.25,
+    "latency_ms": {
+      "p50": 1.4,
+      "p95": 1.7
+    }
+  }
+}

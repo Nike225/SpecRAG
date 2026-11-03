@@ -1,0 +1,165 @@
+{
+  "name": "ollama-nomic-embed-text",
+  "timestamp": "2026-11-02T20:00:35+00:00",
+  "dataset": "eval\\datasets\\nvme_qa.jsonl",
+  "n_questions": 128,
+  "n_chunks": 2755,
+  "embedder": "ollama:nomic-embed-text",
+  "retrieval": {
+    "bm25": {
+      "all": {
+        "hit@1": 0.6167,
+        "hit@5": 0.8917,
+        "recall@5": 0.8917,
+        "mrr@10": 0.7425,
+        "ndcg@10": 0.7936,
+        "n": 120
+      },
+      "lookup": {
+        "hit@1": 0.75,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "mrr@10": 0.8542,
+        "ndcg@10": 0.8912,
+        "n": 60
+      },
+      "paraphrase": {
+        "hit@1": 0.4833,
+        "hit@5": 0.7833,
+        "recall@5": 0.7833,
+        "mrr@10": 0.6308,
+        "ndcg@10": 0.696,
+        "n": 60
+      },
+      "latency_ms": {
+        "p50": 0.42,
+        "p95": 0.8
+      }
+    },
+    "bm25+expansion": {
+      "all": {
+        "hit@1": 0.6083,
+        "hit@5": 0.8917,
+        "recall@5": 0.8917,
+        "mrr@10": 0.739,
+        "ndcg@10": 0.7911,
+        "n": 120
+      },
+      "lookup": {
+        "hit@1": 0.7333,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "mrr@10": 0.8472,
+        "ndcg@10": 0.8862,
+        "n": 60
+      },
+      "paraphrase": {
+        "hit@1": 0.4833,
+        "hit@5": 0.7833,
+        "recall@5": 0.7833,
+        "mrr@10": 0.6308,
+        "ndcg@10": 0.696,
+        "n": 60
+      },
+      "latency_ms": {
+        "p50": 0.43,
+        "p95": 0.76
+      }
+    },
+    "dense": {
+      "all": {
+        "hit@1": 0.6667,
+        "hit@5": 0.8667,
+        "recall@5": 0.8667,
+        "mrr@10": 0.7573,
+        "ndcg@10": 0.8019,
+        "n": 120
+      },
+      "lookup": {
+        "hit@1": 0.7667,
+        "hit@5": 0.95,
+        "recall@5": 0.95,
+        "mrr@10": 0.8403,
+        "ndcg@10": 0.8718,
+        "n": 60
+      },
+      "paraphrase": {
+        "hit@1": 0.5667,
+        "hit@5": 0.7833,
+        "recall@5": 0.7833,
+        "mrr@10": 0.6744,
+        "ndcg@10": 0.7319,
+        "n": 60
+      },
+      "latency_ms": {
+        "p50": 2298.79,
+        "p95": 3078.97
+      }
+    },
+    "hybrid (RRF)": {
+      "all": {
+        "hit@1": 0.725,
+        "hit@5": 0.9167,
+        "recall@5": 0.9167,
+        "mrr@10": 0.8118,
+        "ndcg@10": 0.8479,
+        "n": 120
+      },
+      "lookup": {
+        "hit@1": 0.8167,
+        "hit@5": 0.9667,
+        "recall@5": 0.9667,
+        "mrr@10": 0.8867,
+        "ndcg@10": 0.9147,
+        "n": 60
+      },
+      "paraphrase": {
+        "hit@1": 0.6333,
+        "hit@5": 0.8667,
+        "recall@5": 0.8667,
+        "mrr@10": 0.7369,
+        "ndcg@10": 0.7811,
+        "n": 60
+      },
+      "latency_ms": {
+        "p50": 3078.61,
+        "p95": 3170.78
+      }
+    }
+  },
+  "abstention": {
+    "n_unanswerable": 8,
+    "lexical_configured": {
+      "threshold": 0.08,
+      "unanswerable_refused": 0.0,
+      "answerable_wrongly_refused": 0.0,
+      "balanced_accuracy": 0.5
+    },
+    "lexical_best": {
+      "threshold": 0.26,
+      "unanswerable_refused": 1.0,
+      "answerable_wrongly_refused": 0.075,
+      "balanced_accuracy": 0.9625
+    },
+    "dense_best": {
+      "threshold": 0.72,
+      "unanswerable_refused": 1.0,
+      "answerable_wrongly_refused": 0.0417,
+      "balanced_accuracy": 0.9792
+    }
+  },
+  "answers": {
+    "model": "ollama:llama3.1:8b",
+    "n": 128,
+    "keyword_recall": 0.7486,
+    "citation_precision": 0.6792,
+    "answers_with_correct_citation": 0.9,
+    "citation_coverage": 0.738,
+    "false_abstention_rate": 0.0,
+    "correct_abstention_rate": 0.25,
+    "latency_ms": {
+      "p50": 9391.4,
+      "p95": 13802.1
+    }
+  }
+}

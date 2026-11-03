@@ -1,0 +1,4 @@
+# Better PDF reading order for real spec PDFs
+pymupdf>=1.24
+# Local embeddings / cross-encoder reranker without Ollama (pulls in PyTorch)
+sentence-transformers>=3.0

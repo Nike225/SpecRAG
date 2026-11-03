@@ -1,0 +1,8 @@
+These Markdown files are an ILLUSTRATIVE NVMe corpus written for this repository, in our own words,
+so the pipeline, tests and evaluation can run without downloading anything. Section numbers are
+local to these files and do NOT match the official specification, and details are simplified.
+
+For real use, download the NVM Express specifications (free) from https://nvmexpress.org/specifications/
+— e.g. the NVM Express Base Specification and the NVM Command Set Specification — and index them:
+
+    python -m scripts.ingest path/to/specs/ --rebuild
